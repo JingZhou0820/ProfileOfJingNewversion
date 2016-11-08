@@ -1,0 +1,96 @@
+﻿<%@ Master  Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ProfileOfJing11.Site" %>
+<!--Jing Zhou-->
+<!--300883146-->
+<!--29/09/16-->
+<!--master page-->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <!--css section-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!--suspend contact navbar-->
+    <div style="width:115px; position:fixed; left:50px; top:265px " id="container">
+         <a href="contact2.aspx" target="_blank"> <img src="Asset/girlhead.jpg" width="116" /></a>
+          <p><a href="contact2.aspx" target="_blank"><img src="Asset/emailme.png" width="116" /></a></p>
+          
+    </div>
+
+    
+    <form id="form1" runat="server">
+        <!--navigation header-->
+        <header role="navigation">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                     <!--logo page-->
+                            <img src="Asset/logo.png"class="navbar-brand" height="250" alt="My logo picture" />
+                         
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                       
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                            <li runat="server" id="landing" ><a href="default.aspx" ><i class="fa fa-home fa-lg"style="color:cornflowerblue" aria-hidden="true"></i> Home</a></li>                     
+                            <li runat="server" id="biopage"><a href="bioPage.aspx" runat="server" ><i class="fa fa-heart fa-lg " style="color:red" aria-hidden="true"></i> About</a></li>
+                            <li runat="server" id="project"><a href="projects.aspx" runat="server"><i class="fa fa-file-text fa-lg" style="color:#4ec49d"aria-hidden="true"></i> Projects</a></li>
+                            <li runat="server" id="service"><a href="services.aspx" runat="server"><i class="fa fa-cog fa-lg" style="color:blueviolet" aria-hidden="true"></i> Services</a></li>
+                            <li runat="server" id="contact"><a href="contact2.aspx" runat="server"><i class="fa fa-mobile fa-lg" style="color:goldenrod" aria-hidden="true"></i> Contact</a></li>
+                        </ul>
+                          
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+      <!--main content -->
+        <div role="main">
+             
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--footer navigation bar-->
+        <footer role="contentInfo">
+        
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+     <span class="label label-primary" style="margin:5px"><a href="default.aspx" style="color:white"> Home </a></span>
+<span class="label label-success" style="margin:5px"><a href="bioPage.aspx" style="color:white"> About </a></span>
+<span class="label label-info" style="margin:5px"><a href="projects.aspx" style="color:white"> Projects </a></span>
+<span class="label label-warning" style="margin:5px"><a href="services.aspx" style="color:white"> Services </a></span>
+<span class="label label-danger" style="margin:5px"><a href="contact2.aspx"> Contact </a></span>
+      <h6 style="color:gray;margin:5px">&copy Jing Zhou-Profolio-COMP229-ProfileOfJing11</h6>
+  </div>
+</nav>
+            </footer>
+    </form>
+    <!--Javascript section-->
+    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/app.js"></script>
+   
+</body>
+</html>
